@@ -1,41 +1,21 @@
 # Imágenes del Linktree
 
-Añade aquí dos imágenes para que el linktree muestre tus fotos reales:
+La página usa esta imagen como portada principal:
 
-## 1. `hero.jpg` — Fondo panorámico
-- **Qué es:** la foto panorámica que se ve detrás de todo el contenido.
-- **Recomendación:** la foto del paisaje rocoso con el mar o la de la furgo al atardecer, en **formato horizontal**.
-- **Resolución sugerida:** 1920×1080 px o mayor, comprimida (JPG ~300–500 KB).
-- **Ruta final:** `./images/hero.jpg`
+## `IMG_1092.jpg` - portada del perfil
 
-## 2. `profile.jpg` — Foto de perfil circular
-- **Qué es:** la foto redonda centrada arriba, sobre el nombre.
-- **Recomendación:** recorte cuadrado (**1:1**) donde se te vea de cerca.
-- **Resolución sugerida:** 400×400 px, JPG.
-- **Ruta final:** `./images/profile.jpg`
+- **Qué es:** la foto grande que aparece como fondo del Linktree.
+- **Ruta final:** `./images/IMG_1092.jpg`
+- **Variantes optimizadas:** `IMG_1092-900.webp`, `IMG_1092-1400.webp` y `IMG_1092-1892.webp`.
 
----
-
-## Cómo subirlas
-
-Opción rápida desde la web de GitHub:
-
-1. Entra al repo en GitHub
-2. Navega a la carpeta `images/`
-3. Haz clic en **Add file → Upload files**
-4. Arrastra `hero.jpg` y `profile.jpg`
-5. Commit
-
-O desde local:
-
-```bash
-cp /ruta/a/tu-foto-paisaje.jpg images/hero.jpg
-cp /ruta/a/tu-foto-perfil.jpg  images/profile.jpg
-git add images/
-git commit -m "Add hero and profile images"
-git push
-```
+El HTML no rota la foto ni crea recortes destructivos. La imagen se renderiza como una capa fija detrás del contenido y se levanta por CSS, aumentando también el alto de esa capa, para que la cara quede más cerca de la parte superior en móvil, tablet y ordenador sin dejar huecos de fondo. El navegador usa WebP cuando puede y conserva el JPG como fallback.
 
 ## Fallback automático
 
-Si las imágenes aún no están, el linktree funciona igual mostrando un **gradiente de tus colores de marca** (Azul Suave → Arena Dorada → Naranja Tierra) como fondo. Así siempre queda bonito aunque estés en medio de subirlas.
+Si la imagen todavía no existe, la página sigue funcionando con un degradado usando tu paleta:
+
+- Turquesa Mar
+- Azul Suave
+- Arena Dorada
+- Naranja Tierra
+- Cálido Suave

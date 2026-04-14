@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alamoalberto95pro.github.io/Linktree.ChasingLibertalia/sitemap.xml
